@@ -1,5 +1,6 @@
 # HA-Victron-Display
 Home Assistant Picture-Element Victron Display
+Please find the Victron Background cards (I have created this in Photoshop) that you can place in /local/pictures, or your desired location and the Text file with Yuml code. This is very customizable. 
 
 ![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/fa01e5ba-f9a2-4a3e-95a8-05fe75e5a0bb)
 
@@ -31,8 +32,6 @@ eg.
    21. name: Yellow PV Block - PV Power
    22. name: Yellow PV Block - Icon
    23. name: Yellow PV Block - PV Line
-   
-Please find the Victron Background cards (I have created this in Photoshop) that you can place in /local/pictures, or your desired location and the Text file with Yuml code. This is very customizable. 
 
 # Installation
 1. Download Files to you machine
