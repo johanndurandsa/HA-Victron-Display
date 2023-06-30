@@ -1,0 +1,4 @@
+#### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
+      blank_blank:
+        friendly_name: "Blank Blank"
+        value_template: " "
