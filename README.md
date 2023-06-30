@@ -6,7 +6,32 @@ Home Assistant Picture-Element Victron Display
 ![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/8982e585-4aab-4e37-acd8-97b80c91a577)
 
 
-
+The Name: inside the code is created for each block to understand which one you working on
+eg.
+   name: Red Grid Block - Grid Name
+   name: Red Grid Block - Eskom Grid Watt
+   name: Red Grid Block - Load Shedding
+   name: Red Grid Block - Icon
+   name: Red Grid Block - Line
+   name: Victron Block - Vebus State
+   name: Victron Block - Icon
+   name: Green AC Block - Grid Name
+   name: Green AC Block - AC Loads
+   name: Green AC Block - Icon
+   name: Green AC Block - Grid Line
+   name: Blue Battery Block - Battery SOC
+   name: Blue Battery Block - Battery Power
+   name: Blue Battery Block - Battery Voltage
+   name: Blue Battery Block - Battery Current
+   name: Blue Battery Block - Icon
+   name: Blue Battery Block - Battery V-Line
+   name: Blue Battery Block - Battery H-Line
+   name: Blue Battery Block - Battery Hours Left
+   name: Yellow PV Block - Grid Name
+   name: Yellow PV Block - PV Power
+   name: Yellow PV Block - Icon
+   name: Yellow PV Block - PV Line
+   
 Please find the Victron Background cards (I have created this in Photoshop) that you can place in /local/pictures, or your desired location and the Text file with Yuml code. This is very customizable. 
 
 # Installation
