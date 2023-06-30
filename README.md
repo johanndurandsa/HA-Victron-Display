@@ -12,7 +12,7 @@ Please find the Victron Background cards (I have created this in Photoshop) that
 The Name: inside the code is created for each block to understand which one you working on
 eg.
 name:
-   | --- |
+   | --- | --- |
    | name: Red Grid Block - Grid Name | Name on yop of block. You will need code below |
    | name: Red Grid Block - Eskom Grid Watt | Grid Value from Inverter |
    | name: Red Grid Block - Load Shedding | Loadshedding stage. You will need EskomSePush (ESP) intergration |
