@@ -13,14 +13,14 @@ The Name: inside the code is created for each block to understand which one you 
 eg.
 name:
    | --- |
-   | name: Red Grid Block - Grid Name |
-   | name: Red Grid Block - Eskom Grid Watt |
-   | name: Red Grid Block - Load Shedding |
-   | name: Red Grid Block - Icon |
-   | name: Red Grid Block - Line |
+   | name: Red Grid Block - Grid Name | Name on yop of block. You will need code below |
+   | name: Red Grid Block - Eskom Grid Watt | Grid Value from Inverter |
+   | name: Red Grid Block - Load Shedding | Loadshedding stage. You will need EskomSePush (ESP) intergration |
+   | name: Red Grid Block - Icon | Eskom Towe Icon that |
+   | name: Red Grid Block - Line | Line between Grid and Inverter |
    | name: Victron Block - Vebus State |
    | name: Victron Block - Icon |
-   | name: Green AC Block - Grid Name |
+   | name: Green AC Block - Grid Name | Name on yop of block. You will need code below |
    | name: Green AC Block - AC Loads |
    | name: Green AC Block - Icon |
    | name: Green AC Block - Grid Line |
@@ -32,7 +32,7 @@ name:
    | name: Blue Battery Block - Battery V-Line |
    | name: Blue Battery Block - Battery H-Line |
    | name: Blue Battery Block - Battery Hours Left |
-   | name: Yellow PV Block - Grid Name |
+   | name: Yellow PV Block - Grid Name | Name on yop of block. You will need code below |
    | name: Yellow PV Block - PV Power |
    | name: Yellow PV Block - Icon |
    | name: Yellow PV Block - PV Line |
