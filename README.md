@@ -10,30 +10,31 @@ Please find the Victron Background cards (I have created this in Photoshop) that
 
 The Name: inside the code is created for each block to understand which one you working on
 eg.
+##name:
    | --- |
    | name: Red Grid Block - Grid Name |
    | name: Red Grid Block - Eskom Grid Watt |
-   3. name: Red Grid Block - Load Shedding
-   4. name: Red Grid Block - Icon
-   5. name: Red Grid Block - Line
-   6. name: Victron Block - Vebus State
-   7. name: Victron Block - Icon
-   8. name: Green AC Block - Grid Name
-   9. name: Green AC Block - AC Loads
-   10. name: Green AC Block - Icon
-   11. name: Green AC Block - Grid Line
-   12. name: Blue Battery Block - Battery SOC
-   13. name: Blue Battery Block - Battery Power
-   14. name: Blue Battery Block - Battery Voltage
-   15. name: Blue Battery Block - Battery Current
-   16. name: Blue Battery Block - Icon
-   17. name: Blue Battery Block - Battery V-Line
-   18. name: Blue Battery Block - Battery H-Line
-   19. name: Blue Battery Block - Battery Hours Left
-   20. name: Yellow PV Block - Grid Name
-   21. name: Yellow PV Block - PV Power
-   22. name: Yellow PV Block - Icon
-   23. name: Yellow PV Block - PV Line
+   | name: Red Grid Block - Load Shedding |
+   | name: Red Grid Block - Icon |
+   | name: Red Grid Block - Line |
+   | name: Victron Block - Vebus State |
+   | name: Victron Block - Icon |
+   | name: Green AC Block - Grid Name |
+   | name: Green AC Block - AC Loads |
+   | name: Green AC Block - Icon |
+   | name: Green AC Block - Grid Line |
+   | name: Blue Battery Block - Battery SOC |
+   | name: Blue Battery Block - Battery Power |
+   | name: Blue Battery Block - Battery Voltage |
+   | name: Blue Battery Block - Battery Current |
+   | name: Blue Battery Block - Icon |
+   | name: Blue Battery Block - Battery V-Line |
+   | name: Blue Battery Block - Battery H-Line |
+   | name: Blue Battery Block - Battery Hours Left |
+   | name: Yellow PV Block - Grid Name |
+   | name: Yellow PV Block - PV Power |
+   | name: Yellow PV Block - Icon |
+   | name: Yellow PV Block - PV Line |
 
 # Installation
 1. Download Files to you machine
