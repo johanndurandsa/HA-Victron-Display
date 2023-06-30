@@ -48,12 +48,13 @@ name:
 sensor:
   - platform: template
     sensors:
+      #### - Value bottom Center to spesify how long the battery will last with no Power - ####
       seconds_to_hours:
         friendly_name: "Seconds to Hours"
         value_template: "{{ (states('sensor.victron_system_battery_time_to_go')|float / 3600)|round(2) }}"
         unit_of_measurement: 'hours'
 
-#### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
+      #### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
       blank_blank:
         friendly_name: "Blank Blank"
         value_template: " "
