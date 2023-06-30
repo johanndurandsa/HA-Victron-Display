@@ -13,29 +13,29 @@ The Name: inside the code is created for each block to understand which one you 
 eg.
 | name: | Description |
    | --- | --- |
-   | name: Red Grid Block - Grid Name | Name on yop of block. You will need code below |
+   | name: Red Grid Block - Grid Name | Name on top of block. You will need code below |
    | name: Red Grid Block - Eskom Grid Watt | Grid Value from Inverter |
    | name: Red Grid Block - Load Shedding | Loadshedding stage. You will need EskomSePush (ESP) intergration |
-   | name: Red Grid Block - Icon | Eskom Towe Icon that |
+   | name: Red Grid Block - Icon | Eskom Tower Icon on Red Block |
    | name: Red Grid Block - Line | Line between Grid and Inverter |
-   | name: Victron Block - Vebus State |
-   | name: Victron Block - Icon |
-   | name: Green AC Block - Grid Name | Name on yop of block. You will need code below |
-   | name: Green AC Block - AC Loads |
-   | name: Green AC Block - Icon |
-   | name: Green AC Block - Grid Line |
-   | name: Blue Battery Block - Battery SOC |
-   | name: Blue Battery Block - Battery Power |
-   | name: Blue Battery Block - Battery Voltage |
-   | name: Blue Battery Block - Battery Current |
-   | name: Blue Battery Block - Icon |
-   | name: Blue Battery Block - Battery V-Line |
-   | name: Blue Battery Block - Battery H-Line |
-   | name: Blue Battery Block - Battery Hours Left |
-   | name: Yellow PV Block - Grid Name | Name on yop of block. You will need code below |
-   | name: Yellow PV Block - PV Power |
-   | name: Yellow PV Block - Icon |
-   | name: Yellow PV Block - PV Line |
+   | name: Victron Block - Vebus State | Verbose state on top of Inverter to show the status |
+   | name: Victron Block - Icon | Yellow Icon on the Inverter |
+   | name: Green AC Block - Grid Name | Name on top of block. You will need code below |
+   | name: Green AC Block - AC Loads | AC Load to the house |
+   | name: Green AC Block - Icon | Home Icon on Green Block |
+   | name: Green AC Block - Grid Line | Line between Inverter and Home
+   | name: Blue Battery Block - Battery SOC | Battery % on Blue Block |
+   | name: Blue Battery Block - Battery Power | Battery Power on Blue Block |
+   | name: Blue Battery Block - Battery Voltage | Battery Voltage on Blue Block |
+   | name: Blue Battery Block - Battery Current | Battery Current on Blue Block |
+   | name: Blue Battery Block - Icon | Battery Icon on Blue Block |
+   | name: Blue Battery Block - Battery V-Line | Virtical Line to Inverter |
+   | name: Blue Battery Block - Battery H-Line | Line from Battery to V-Line |
+   | name: Blue Battery Block - Battery Hours Left | 
+   | name: Yellow PV Block - Grid Name | Name on top of block. You will need code below |
+   | name: Yellow PV Block - PV Power | Display how long the battery will last with no Power. You will need the Sensor configuration at the bottom |
+   | name: Yellow PV Block - Icon | PV Icon on Yellow Block |
+   | name: Yellow PV Block - PV Line | PV Line to V-Line |
 
 # Installation
 1. Download Files to you machine
