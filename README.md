@@ -10,8 +10,8 @@ Please find the Victron Background cards (I have created this in Photoshop) that
 
 The Name: inside the code is created for each block to understand which one you working on
 eg.
-   1. name: Red Grid Block - Grid Name
-   2. name: Red Grid Block - Eskom Grid Watt
+   | name: Red Grid Block - Grid Name |
+   | name: Red Grid Block - Eskom Grid Watt |
    3. name: Red Grid Block - Load Shedding
    4. name: Red Grid Block - Icon
    5. name: Red Grid Block - Line
