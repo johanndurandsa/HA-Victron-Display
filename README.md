@@ -7,6 +7,7 @@ Please find the Victron Background cards (I have created this in Photoshop) that
 
 ![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/8982e585-4aab-4e37-acd8-97b80c91a577)
 
+![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/a252308f-fa44-4d4b-b34b-b205cd961496)
 
 The Name: inside the code is created for each block to understand which one you working on
 eg.
@@ -43,10 +44,18 @@ name:
 4. Copy an of the 2 png files in the /local/pictures location
 5. Edit your configuration 
 6. Add the following code in your configuration.yaml
-   #### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
-         blank_blank:
-           friendly_name: "Blank Blank"
-           value_template: " "
+| sensor:
+  - platform: template
+    sensors:
+      seconds_to_hours:
+        friendly_name: "Seconds to Hours"
+        value_template: "{{ (states('sensor.victron_system_battery_time_to_go')|float / 3600)|round(2) }}"
+        unit_of_measurement: 'hours'
+
+#### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
+      blank_blank:
+        friendly_name: "Blank Blank"
+        value_template: " " |
 7. Restart Home Assistant
 8. Goto your Dashboard and create a new picture-element card
 9. Copy and past the Victron yuml code in the text file in this new card
