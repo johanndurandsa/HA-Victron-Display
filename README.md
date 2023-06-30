@@ -6,9 +6,22 @@ Home Assistant Picture-Element Victron Display
 
 Please find the Victron Background cards (I have created this in Photoshop) that you can place in /local/pictures, or your desired location and the Text file with Yuml code. This is very customizable. 
 
-Add the following code in your configuration.yaml
- 
-#### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
-      blank_blank:
-        friendly_name: "Blank Blank"
-        value_template: " "
+# Installation
+1. Download Files to you machine
+2. Connect to your Home Assistant and browse to your www folder
+3. Create a picture folder under www folder
+4. Copy an of the 2 png files in the /local/pictures location
+5. Edit your configuration 
+6. Add the following code in your configuration.yaml
+   #### - Created Blank Sensor to Allow Text on Picture-Element Card - ####
+         blank_blank:
+           friendly_name: "Blank Blank"
+           value_template: " "
+7. Restart Home Assistant
+8. Goto your Dashboard and create a new picture-element card
+9. Copy and past the Victron yuml code in the text file in this new card
+10. Save your card and test.
+11. You can customize as your liking.
+
+Thanks
+Johann du Rand
