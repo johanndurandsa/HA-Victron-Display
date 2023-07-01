@@ -1,0 +1,438 @@
+type: picture-elements
+image: local/pictures/GX Touch 50_HA12.png
+card_mod:
+  style: |
+    @keyframes my-blink {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    ha-card {
+      --paper-item-icon-grid-color-check: {% if states('sensor.eskom_grid') > "0" %} red {% else %} none {% endif %};
+      --paper-item-icon-gridIcon-color-check: {% if states('sensor.eskom_grid') > "0" %} white {% else %} red {% endif %};
+      --paper-item-icon-acloads-color-check: {% if states('sensor.ac_loads') > "0" %} blue {% else %} red {% endif %};
+      --paper-item-icon-acloadsIcon-color-check: {% if states('sensor.ac_loads') > "0" %} white {% else %} red {% endif %};
+      --paper-item-icon-battery-color-check: {% if states('sensor.battery_power') > "0" %} blue {% else %} blue {% endif %};
+      --paper-item-icon-batteryIcon-color-check: {% if states('sensor.battery_soc') > "60" %} white {% else %} white {% endif %};
+      --paper-item-icon-pv-color-check: {% if states('sensor.pv_power') > "0" %} orange {% else %} none {% endif %};
+      --paper-item-icon-pvIcon-color-check: {% if states('sensor.pv_power') > "0" %} white {% else %} red {% endif %};
+      --paper-item-icon-vebus--color-check: {% if states('sensor.victron_vebus_state_246') > "0" %} yellow {% else %} red {% endif %};
+
+    }
+elements:
+  - type: state-label
+    name: Red Grid Block - Grid Name
+    entity: sensor.blank_blank
+    prefix: GRID
+    style:
+      top: 2%
+      left: 11%
+      color: rgb(255,255,255)
+      font-family: Arial
+      font-size: 130%
+      font-weight: bold
+      transform: rotate(0deg)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Red Grid Block - Eskom Grid Watt
+    entity: sensor.eskom_grid
+    style:
+      top: 20%
+      left: 19%
+      font-size: 130%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Red Grid Block - Loadshedding Name
+    entity: sensor.blank_blank
+    prefix: Stage
+    style:
+      top: 28%
+      left: 13%
+      color: rgb(255,255,255)
+      font-family: Arial
+      font-size: 80%
+      font-weight: bold
+      transform: rotate(0deg)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Red Grid Block - Load Shedding
+    entity: sensor.loadshedding_local_status
+    style:
+      top: 32%
+      left: 25%
+      font-size: 280%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Red Grid Block - Icon
+    icon: mdi:transmission-tower
+    entity: sensor.eskom_grid
+    style:
+      left: 7%
+      top: 30%
+      transform: translate(-50%, -50%) scale(2, 2)
+      opacity: 0.6
+      '--paper-item-icon-color': var(--paper-item-icon-gridIcon-color-check)
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Red Grid Block - Line
+    icon: mdi:lightning-bolt1
+    entity: sensor.eskom_grid
+    style:
+      top: 22.98%
+      left: 35.1%
+      width: 6.6%
+      height: 4px
+      background-color: var(--paper-item-icon-grid-color-check)
+      transform: translate(-50%, -50%)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Red Grid Block - Dot on Grid
+    icon: mdi:circle
+    style:
+      top: 19.4%
+      left: 28.5%
+      color: var(--paper-item-icon-grid-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Red Grid Block - Dot on Victron
+    icon: mdi:circle
+    style:
+      top: 19.4%
+      left: 36.9%
+      color: var(--paper-item-icon-grid-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: state-label
+    name: Victron Block - Vebus State
+    entity: sensor.victron_vebus_state_246
+    style:
+      top: 7%
+      left: 50%
+      font-size: 130%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Victron Block - Icon
+    icon: mdi:flash-triangle
+    entity: sensor.victron_vebus_state_246
+    style:
+      left: 42%
+      top: 37%
+      transform: translate(-50%, -50%) scale(1.5, 1.5)
+      '--paper-item-icon-color': var(--paper-item-icon-vebus--color-check)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Green AC Block - Grid Name
+    entity: sensor.blank_blank
+    prefix: AC Loads
+    style:
+      top: 2%
+      left: 72%
+      color: rgb(255,255,255)
+      font-family: Arial
+      font-size: 130%
+      font-weight: bold
+      transform: rotate(0deg)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Green AC Block - AC Loads
+    entity: sensor.ac_loads
+    style:
+      top: 20%
+      left: 82%
+      font-size: 130%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Green AC Block - Icon
+    icon: mdi:home-lightning-bolt
+    entity: sensor.ac_loads
+    style:
+      left: 92%
+      top: 31%
+      transform: translate(-50%, -50%) scale(2, 2)
+      opacity: 0.6
+      '--paper-item-icon-color': var(--paper-item-icon-acloadsIcon-color-check)
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Green AC Block - Grid Line
+    icon: mdi:arrow-right1
+    entity: sensor.ac_loads
+    style:
+      top: 22.96%
+      left: 64.66%
+      width: 6.8%
+      height: 4px
+      background-color: var(--paper-item-icon-acloads-color-check)
+      transform: translate(-50%, -50%)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Green AC Block - Dot on Victron
+    icon: mdi:circle
+    style:
+      top: 19.3%
+      left: 57.8%
+      color: var(--paper-item-icon-acloads-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Green AC Block - Dot on AC Loads
+    icon: mdi:circle
+    style:
+      top: 19.3%
+      left: 66.5%
+      color: var(--paper-item-icon-acloads-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: state-label
+    name: Blue Battery Block - Battery SOC
+    entity: sensor.battery_soc
+    style:
+      top: 60%
+      left: 18%
+      font-size: 130%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Blue Battery Block - Battery Power
+    entity: sensor.battery_power
+    style:
+      top: 68%
+      left: 18%
+      font-size: 90%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Blue Battery Block - Battery Voltage
+    entity: sensor.battery_voltage
+    style:
+      top: 73%
+      left: 25%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Blue Battery Block - Battery Current
+    entity: sensor.battery_current
+    style:
+      top: 78%
+      left: 25%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Blue Battery Block - Icon
+    icon: mdi:car-battery
+    entity: sensor.ac_loads
+    style:
+      left: 8%
+      top: 75%
+      transform: translate(-50%, -50%) scale(2, 2)
+      opacity: 0.6
+      '--paper-item-icon-color': var(--paper-item-icon-batteryIcon-color-check)
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Blue Battery Block - Battery V-Line
+    icon: mdi:lightning-bol
+    entity: sensor.battery_power
+    style:
+      top: 52.5%
+      left: 50.1%
+      width: 1.2%
+      height: 70px
+      background-color: var(--paper-item-icon-battery-color-check)
+      transform: translate(-50%, -50%)
+      animation: my-blink 2s infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Blue Battery Block - Dot on Victron V-Line
+    icon: mdi:circle
+    style:
+      top: 37%
+      left: 47.63%
+      color: var(--paper-item-icon-battery-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: state-icon
+    name: Blue Battery Block - Battery H-Line
+    icon: mdi:lightning-bolt1
+    entity: sensor.battery_power
+    style:
+      top: 66.9%
+      left: 38.6%
+      width: 15%
+      height: 4px
+      background-color: var(--paper-item-icon-battery-color-check)
+      transform: translate(-50%, -50%)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Blue Battery Block - Dot on Battery
+    icon: mdi:circle
+    style:
+      top: 63.3%
+      left: 27.8%
+      color: var(--paper-item-icon-battery-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: state-label
+    name: Blue Battery Block - Battery Hours Left
+    entity: sensor.seconds_to_hours
+    style:
+      top: 78%
+      left: 50%
+      font-size: 180%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Yellow PV Block - Grid Name
+    entity: sensor.blank_blank
+    prefix: PV
+    style:
+      top: 47%
+      left: 79%
+      color: rgb(255,255,255)
+      font-family: Arial
+      font-size: 130%
+      font-weight: bold
+      transform: rotate(0deg)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Yellow PV Block - PV Main
+    entity: sensor.victron_system_dc_pv_power
+    style:
+      top: 61%
+      left: 81%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Yellow PV Block - Mppt 1
+    entity: sensor.victron_solarcharger_yield_power_247
+    style:
+      top: 67%
+      left: 81%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Yellow PV Block - Mppt 2
+    entity: sensor.victron_solarcharger_yield_power_245
+    style:
+      top: 73%
+      left: 81%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-label
+    name: Yellow PV Block - Mppt 3
+    entity: sensor.victron_solarcharger_yield_power_239
+    style:
+      top: 79%
+      left: 81%
+      font-size: 80%
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Yellow PV Block - Icon
+    icon: mdi:solar-power-variant
+    entity: sensor.pv_power
+    style:
+      left: 92%
+      top: 74%
+      transform: translate(-50%, -50%) scale(2, 2)
+      opacity: 0.6
+      '--paper-item-icon-color': var(--paper-item-icon-pvIcon-color-check)
+    tap_action:
+      action: none
+  - type: state-icon
+    name: Yellow PV Block - PV Line
+    icon: mdi:lightning-bolt1
+    entity: sensor.pv_power
+    style:
+      top: 66.75%
+      left: 61.3%
+      width: 15.2%
+      height: 4px
+      background-color: var(--paper-item-icon-pv-color-check)
+      transform: translate(-50%, -50%)
+      animation: my-blink 2s infinite
+      animation-fill-mode: both
+  - type: icon
+    name: Yellow PV Block - Dot on PV
+    icon: mdi:circle
+    style:
+      top: 63.1%
+      left: 67.3%
+      color: var(--paper-item-icon-pv-color-check)
+      transform: scale(0.5)
+      animation: my-blink 2s linear infinite
+      animation-fill-mode: both
+  - type: state-label
+    name: Grey Block - Name Next Loadshedding
+    entity: sensor.blank_blank
+    prefix: Next Loadshedding
+    style:
+      top: 83%
+      left: 37%
+      color: white
+      font-family: Arial
+      font-size: 77%
+      font-weight: bold
+      transform: rotate(0deg)
+    tap_action:
+      action: none
+  - type: state-label
+    name: Grey Block - Next Loadshedding
+    entity: calendar.loadshedding_local_schedule
+    attribute: start_time
+    style:
+      top: 94%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-size: 15px
+      font-weight: bold
+    tap_action:
+      action: none
+  - type: service-button
+    name: Grey Block - Charge Batteries Button
+    title: Charge
+    style:
+      top: 92%
+      left: 16%
+      '--mdc-theme-primary': blue
+    service: switch.toggle
+    service_data:
+      entity_id: switch.keep_batteries_charged
