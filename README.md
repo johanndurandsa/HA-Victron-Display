@@ -3,6 +3,11 @@ Home Assistant Picture-Element Victron Display
 
 Please find the Victron Background cards (I have created this in Photoshop) that you can place in /local/pictures, or your desired location and the Text file with Yuml code. This is very customizable. 
 
+Files to use
+1. GX Touch 50_HA12.png
+2. Victron_YUML_Code_v3.yuml
+3. configuration.yuml
+   
 ![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/36982e17-b636-45ec-bb02-df3cc8b80773)
 
 ![image](https://github.com/johanndurandsa/HA-Victron-Display/assets/98578816/26caa743-b068-4395-89ad-a3260a460ee8)
